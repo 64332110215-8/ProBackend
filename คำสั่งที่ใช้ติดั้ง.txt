@@ -1,0 +1,3 @@
+
+step1 docker-compose build
+step2 docker-compose up -d
