@@ -18,6 +18,7 @@ ARG DOCKER_REGISTRY=docker.io
 FROM ${DOCKER_REGISTRY}/dspace/dspace-dependencies:${DSPACE_VERSION} AS build
 ARG TARGET_DIR=dspace-installer
 WORKDIR /app
+USER root
 # The dspace-installer directory will be written to /install
 RUN mkdir /install \
     && chown -Rv dspace: /install \

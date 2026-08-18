@@ -105,6 +105,7 @@ services:
     volumes:
     # Keep Solr data directory between reboots
     - solr_data:/var/solr/data
+    - ./dspace/solr/search/conf/lang:/var/solr/data/search/conf/lang
     # NOTE: We are not running Solr as "root", but we need root permissions to copy our cores to the mounted
     # /var/solr/data directory. Then we start Solr as the "solr" user.
     user: root
